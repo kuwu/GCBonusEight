@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.*;
 
-import static java.util.Collections.*;
 
 /**
  * Created by kuwu on 2017/07/07.
@@ -12,6 +10,45 @@ public class MovieApp {
   public static void main(String[] args) {
 
 
+    char userChar;
+    boolean value = true;
+
+
+    // runs Factorial one time before continue/check loop
+    findMovie();
+
+    // loop allows user to continue using 'y or Y' until the user
+    // types 'n or N' to quit    validates for 'y or Y' and 'n or N'
+    do {
+      userChar = getUserInput();
+      if (userChar == 'y') {
+        findMovie();
+      } else if (userChar == 'n') {
+        value = false;
+      } else {
+        System.out.println("\u001B[31m" + userChar + " is not a valid choice, please re-enter"+ "\u001B[0m");
+      }
+
+    } while (value);
+
+    // Informing the user the program has ended
+    System.out.print("Goodbye");
+
+  }
+
+
+  public static char getUserInput() {
+    Scanner scnr = new Scanner(System.in); // create a scanner object
+    System.out.println("\nWould you like to continue?  (y / n):");
+    // cast uppercase to lowercase
+    String userInput = scnr.next().toLowerCase();
+
+    return userInput.charAt(0);
+
+  }
+
+
+  private static void findMovie() {
     ArrayList<Movie> list = new ArrayList<>();
 
     for (int i = 1; i < 101; i++) {
@@ -22,9 +59,12 @@ public class MovieApp {
 
     // TODO select category by number
     // TODO arrange movie in alphabetical
-    // TODO add continue y/n
+
 
     Scanner scan = new Scanner(System.in);
+    System.out.println("\u001B[35m" + "Welcome to the Movie List Application!" + "\u001B[0m");
+    System.out.println("\u001B[35m" + "There are for categories to choose from: " + "\u001B[0m"+"\n");
+    System.out.println("\u001B[33m" + "Animated,  Drama,  Horror  and  Scifi\n" + "\u001B[0m");
     System.out.println("What movie category are you interested in? ");
 
     String input = scan.nextLine();
@@ -32,14 +72,13 @@ public class MovieApp {
       if (check.getCatagory().equalsIgnoreCase(input)) {
         System.out.println(check.getTitle());
       } else {
-
-        continue;
+        // continue;
       }
     }
   }
 }
 
-      //  search my movie name
+//  search my movie name
 
 //    Scanner scan = new Scanner(System.in);
 //    System.out.println("Enter a movie title to search: ");
