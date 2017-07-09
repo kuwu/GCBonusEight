@@ -1,3 +1,5 @@
+
+
 /**
  * Created by kuwu on 2017/07/07.
  */
@@ -6,15 +8,12 @@ public class Movie {
   private String title;
   private String catagory;
 
-
   //blank constructor
   public Movie(String title, String catagory) {
     this.title = title;
     this.catagory = catagory;
 
-
   }
-
 
   public String getTitle() {
     return title;
@@ -243,7 +242,6 @@ public class Movie {
       default:
         return new Movie("NO SUCH MOVIE", "");
     }
-
 
   }
 
