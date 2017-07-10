@@ -30,7 +30,7 @@ public class MovieApp {
       } else if (userChar == 'n') {
         value = false;
       } else {
-        System.out.println("\u001B[31m" + userChar + " is not a valid choice, please re-enter"+ "\u001B[0m");
+        System.out.println("\u001B[31m" + userChar + " is not a valid choice, please re-enter" + "\u001B[0m");
       }
 
     } while (value);
@@ -56,8 +56,6 @@ public class MovieApp {
     for (int i = 1; i < 101; i++) {
       list.add(Movie.getMovie(i));
 
-
-
     }
 
     // TODO select category by number
@@ -65,7 +63,7 @@ public class MovieApp {
 
     Scanner scan = new Scanner(System.in);
     System.out.println("\u001B[35m" + "Welcome to the Movie List Application!" + "\u001B[0m");
-    System.out.println("\u001B[35m" + "There are for categories to choose from: " + "\u001B[0m"+"\n");
+    System.out.println("\u001B[35m" + "There are for categories to choose from: " + "\u001B[0m" + "\n");
     System.out.println("\u001B[33m" + "Animated, Drama, Horror, Comedy, Musical or Scifi\n" + "\u001B[0m");
     System.out.println("What movie category are you interested in? ");
 
@@ -79,16 +77,3 @@ public class MovieApp {
   }
 }
 
-//  search my movie name
-
-//    Scanner scan = new Scanner(System.in);
-//    System.out.println("Enter a movie title to search: ");
-//    String input = scan.nextLine();
-//    for (Movie check : list){
-//      if (check.getTitle().equalsIgnoreCase(input)){
-//        System.out.println("\n" + check);
-//      }else {
-//
-//        continue;
-//      }
-//    }
