@@ -8,43 +8,52 @@ import java.util.Scanner;
 public class MovieApp {
 
   public static void main(String[] args) {
-
+    System.out.println("\u001B[35m" + "Welcome to the Movie List Application!" + "\u001B[0m");
+    System.out.println("\u001B[35m" + "There are six categories to choose from: " + "\u001B[0m" + "\n");
     // runs movie search one time before continue/check loop
     findMovie();
     // runs check continue (y/n)
     getContinue();
 
   }
-  public static String getCategoryNum(){
+
+  public static String getCategoryNum() {
     Scanner scnr = new Scanner(System.in);
-  int usrInp;
+    int usrInp;
 
 
-  usrInp = scnr.nextInt();
+    usrInp = scnr.nextInt();
 
-  int genre = usrInp;
+    int genre = usrInp;
 
-  String category;
+    String category;
 
-            switch (genre) {
-    case 1:  category = "Animated";
-      break;
-    case 2:  category = "Drama";
-      break;
-    case 3:  category = "Horror";
-      break;
-    case 4:  category = "Comedy";
-      break;
-    case 5:  category = "Musical";
-      break;
-    case 6:  category = "Scifi";
-      break;
-    default: category = "Invalid genre";
-      break;
-  }
-    System.out.println(category);
+    switch (genre) {
+      case 1:
+        category = "Animated";
+        break;
+      case 2:
+        category = "Drama";
+        break;
+      case 3:
+        category = "Horror";
+        break;
+      case 4:
+        category = "Comedy";
+        break;
+      case 5:
+        category = "Musical";
+        break;
+      case 6:
+        category = "Scifi";
+        break;
+      default:
+        category = "Invalid genre";
+        break;
+    }
+    System.out.println(category + " selection: \n");
     return category;
-}
+  }
 
   private static void getContinue() {
     char userChar;
@@ -88,12 +97,11 @@ public class MovieApp {
 
     }
 
-    // TODO select category by number
+
     // TODO arrange movie in alphabetical
 
     Scanner scan = new Scanner(System.in);
-    System.out.println("\u001B[35m" + "Welcome to the Movie List Application!" + "\u001B[0m");
-    System.out.println("\u001B[35m" + "There are six categories to choose from: " + "\u001B[0m" + "\n");
+
     System.out.println("\u001B[33m" + "(1)Animated, (2)Drama, (3)Horror, (4)Comedy, (5)Musical, (6)Scifi\n" + "\u001B[0m");
     System.out.println("What movie category are you interested in? ");
     //getCategoryNum();
