@@ -74,6 +74,9 @@ public class MovieApp {
       if (check.getCatagory().equalsIgnoreCase(input)) {
         System.out.println(check.getTitle());
 
+      }else {
+        System.out.println("Not a valid category");
+        break;
       }
     }
   }
